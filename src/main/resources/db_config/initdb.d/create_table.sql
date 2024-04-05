@@ -6,6 +6,6 @@ CREATE TABLE ENCORE_TODO_TBL(
 	PRIMARY KEY(ID)
 );
 
-INSERT INTO encore_todo_tbl(SUBJECT, body, completed)
-VALUES('test','test',0);
+INSERT INTO ENCORE_TODO_TBL(SUBJECT, body, completed)
+VALUES('test2','test2',0);
 
