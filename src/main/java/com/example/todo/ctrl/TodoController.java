@@ -35,10 +35,10 @@ public class TodoController {
     @Autowired
     public TodoService todoService ;
     @GetMapping("/list")
-    public String list() {
+    public List<TodoEntity> list() {
         System.out.println(">>> ctrl list ");
-        List<TodoEntity> result = todoService.findAll();
+        List<TodoEntity> result = todoService.getTodos();
         System.out.println("debug >>> result , " + result.size());
-        return "Hello World Complete!~~~";
+        return result;
     }
 }

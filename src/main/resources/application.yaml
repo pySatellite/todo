@@ -5,6 +5,9 @@ server:
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://database:3306/encore
+    url: jdbc:mariadb://localhost:3306/encore
     username: todo_user
     password: todo_passwd
+
+mybatis:
+  mapper-locations: mapper/*.xml

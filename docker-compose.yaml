@@ -7,7 +7,7 @@ services:
     depends_on:
       - database
     ports:
-      - 8888:8888
+      - 8949:8888
     environment:
       SPRING_DATASOURCE_URL: jdbc:mariadb://database:3306/encore?useUnicode=true
       SPRING_DATASOURCE_USERNAME: root

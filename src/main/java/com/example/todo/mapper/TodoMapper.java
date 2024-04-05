@@ -8,7 +8,5 @@ import com.example.todo.entity.TodoEntity;
 
 @Mapper
 public interface TodoMapper {
-
-    public List<TodoEntity> findAll();
-    // public String selectSampleData();
+    List<TodoEntity> findAll();
 }
