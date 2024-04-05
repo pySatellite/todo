@@ -1,68 +1,7 @@
-# version: 3.8
-# services:
-#   db:
-#     image: mariadb
-#     container_name: todo-db
-#     restart: always
-#     enviroment:
-#       MYSQL_DATABASE: encore
-#       MYSQL_USERNAME: root
-#       MYSQL_ROOT_PASSWORD: 123456789
-#     ports:
-#       - 3306:3306
-#     networks:
-#       - todo-network
-#     healthcheck:
-#       test: /usr/bin/mysql --user=root --password123456789 --execute \"SHOW DATABASES;\"
-#       interval: 2s
-#       timeout: 20s
-#       retries: 10
-#     volumes:
-#       - ./data:/docker-entrypoint-initdb.d
-
-# networks:
-#   todo-network:
-#     name: todo-network
-#     driver: bridge
-
-
-
-
-# version: "3"
-# services:
-#   database:
-#     container_name: database
-#     image: mariadb
-#     volumes:
-#       - ~/docker/mariadb/etc/mysql/conf.d:/etc/mysql/conf.d:ro
-#       - ~/docker/mariadb/var/lib/mysql:/var/lib/mysql
-#       - ~/docker/mariadb/var/log/maria:/var/log/maria
-#     environment:
-#       - MYSQL_DATABASE=database_name
-#       - MYSQL_ROOT_PASSWORD=1234
-#       - MYSQL_ROOT_HOST=%
-#     command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
-#     ports:
-#       - 3306:3306
-
-#   application:
-#     build: .
-#     environment:
-#       SPRING_DATASOURCE_URL: jdbc:mariadb://database:3306/database_name?useUnicode=true
-#       SPRING_DATASOURCE_USERNAME: root
-#       SPRING_DATASOURCE_PASSWORD: password
-#     ports:
-#       - 8080:8080
-#     depends_on:
-#       - database
-
-# 3.9
 version: "3"
 
 services:
-  
   app:
-    #image: 2024-encore-server:1.0
     container_name: todo-container
     build: .
     depends_on:
@@ -76,6 +15,7 @@ services:
     restart: always
     links:
       - database
+    platform: linux/amd64
     
   database:
     image: mariadb
