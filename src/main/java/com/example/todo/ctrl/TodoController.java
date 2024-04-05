@@ -33,13 +33,12 @@ GET  : http://localhost:3000/todos/all
 public class TodoController {
 
     @Autowired
-    public TodoService todoService ; 
+    public TodoService todoService ;
     @GetMapping("/list")
     public String list() {
         System.out.println(">>> ctrl list ");
-        // List<TodoEntity> result = todoService.findAll();
-        // System.out.println("debug >>> result , "+result); 
+        List<TodoEntity> result = todoService.findAll();
+        System.out.println("debug >>> result , " + result.size());
         return "Hello World Complete!~~~";
-    
     }
 }
