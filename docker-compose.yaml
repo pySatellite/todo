@@ -21,9 +21,10 @@ services:
     image: mariadb
     container_name: mariadb-container
     environment:
-      - MYSQL_DATABASE=encore
-      - MYSQL_ROOT_PASSWORD=1234
-      - MYSQL_ROOT_HOST=%
+      MARIADB_ROOT_PASSWORD: 1234
+      MARIADB_USER: todouser
+      MARIADB_PASSWORD: 1234
+      MARIADB_DATABASE: encore
     volumes:
       - ./src/main/resources/db_config/conf.d:/etc/myslq/conf.d
       - ./src/main/resources/db_config/data:/var/lib/mysql
