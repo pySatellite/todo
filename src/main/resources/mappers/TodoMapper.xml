@@ -6,8 +6,7 @@
             resultType="com.example.todo.entity.TodoEntity">
         SELECT 
             id, subject, body, completed
-        FROM    ENCORE_TODO_TBL 
+        FROM ENCORE_TODO_TBL
         ORDER BY id DESC
     </select>
-
 </mapper>

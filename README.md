@@ -8,7 +8,7 @@
 ## Structure
 ```mermaid
 flowchart LR
-LOCAL(((LOCAL)))--8864-->APP
+LOCAL(((LOCAL)))--8972-->APP
 DOCKER(((DOCKER)))--8888-->APP
 APP--localhost:6603-->MariaDB
 APP--database:3306-->MariaDB[(MariaDB)]
@@ -24,7 +24,7 @@ $ docker compose up -d --force-recreate --build
 ```
 ![list](./screenshot/list.png)
 
-- local - http://localhost:8963/list
+- local - http://localhost:8972/list
 ```
 $ ./graclew clean bootRun
 ```
