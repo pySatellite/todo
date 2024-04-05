@@ -22,12 +22,10 @@ services:
     container_name: mariadb-container
     environment:
       MARIADB_ROOT_PASSWORD: 1234
-      MARIADB_USER: todouser
-      MARIADB_PASSWORD: 1234
+      MARIADB_USER: todo_user
+      MARIADB_PASSWORD: todo_passwd
       MARIADB_DATABASE: encore
     volumes:
-      - ./src/main/resources/db_config/conf.d:/etc/myslq/conf.d
-      - ./src/main/resources/db_config/data:/var/lib/mysql
       - ./src/main/resources/db_config/initdb.d:/docker-entrypoint-initdb.d
     ports:
       - 3306:3306
