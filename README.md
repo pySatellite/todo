@@ -1,11 +1,23 @@
-# springboot todo by myb...
+# SpringBoot MyBartis3 MariaDB Sample
+
+- java 17
+- springboot 3.1.10
+- mybatis 3.0.3
+- 11.3.2-MariaDB-1:11.3.2+maria~ubu2204
 
 ## RUN
+- docker compose - http://localhost:8888/list
 ```
 # Disabled / build -> auto multi-stage build!
 # $ ./gradlew clean bootJar
 
 $ docker compose up -d --force-recreate --build
+```
+![list](./screenshot/list.png)
+
+- local - http://localhost:8963/list
+```
+$ ./graclew clean bootRun
 ```
 
 ## Check Telnet

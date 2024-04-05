@@ -7,11 +7,11 @@ services:
     depends_on:
       - database
     ports:
-      - 8949:8888
+      - "8888:8972"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mariadb://database:3306/encore?useUnicode=true
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: 1234
+      SPRING_DATASOURCE_USERNAME: todo_user
+      SPRING_DATASOURCE_PASSWORD: todo_passwd
     restart: always
     links:
       - database
@@ -28,4 +28,4 @@ services:
     volumes:
       - ./src/main/resources/db_config/initdb.d:/docker-entrypoint-initdb.d
     ports:
-      - 3306:3306
+      - "6033:3306"
