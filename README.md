@@ -5,6 +5,15 @@
 - mybatis 3.0.3
 - 11.3.2-MariaDB-1:11.3.2+maria~ubu2204
 
+## Structure
+```mermaid
+flowchart LR
+LOCAL(((LOCAL)))--8864-->APP
+DOCKER(((DOCKER)))--8888-->APP
+APP--localhost:6603-->MariaDB
+APP--database:3306-->MariaDB[(MariaDB)]
+```
+
 ## RUN
 - docker compose - http://localhost:8888/list
 ```
