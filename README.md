@@ -45,3 +45,7 @@ i
 ## Ref
 - https://spring.io/guides/topicals/spring-boot-docker
 - https://dkswngus7.tistory.com/19
+
+
+## Err
+- [Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required](https://stackoverflow.com/questions/75136845/property-sqlsessionfactory-or-sqlsessiontemplate-are-required-the-problem-i)

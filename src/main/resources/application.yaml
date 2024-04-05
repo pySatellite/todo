@@ -10,4 +10,4 @@ spring:
     password: todo_passwd
 
 mybatis:
-  mapper-locations: mapper/*.xml
+  mapper-locations: mappers/*.xml
