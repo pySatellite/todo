@@ -20,7 +20,7 @@ APP--database:3306-->MariaDB[(MariaDB)]
 # Disabled / build -> auto multi-stage build!
 # $ ./gradlew clean bootJar
 
-$ docker compose up -d --force-recreate --build
+$ docker compose up -d --force-recreate --build --renew-anon-volumes
 ```
 ![list](./screenshot/list.png)
 

@@ -9,7 +9,7 @@ services:
     ports:
       - "8888:8972"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mariadb://database:3306/encore?useUnicode=true
+      SPRING_DATASOURCE_URL: jdbc:mariadb://database:3306/sample?useUnicode=true
       SPRING_DATASOURCE_USERNAME: todo_user
       SPRING_DATASOURCE_PASSWORD: todo_passwd
     restart: always
@@ -18,14 +18,14 @@ services:
     platform: linux/amd64
     
   database:
-    image: mariadb
+    image: mariadb:11.3.2
     container_name: mariadb-container
     environment:
       MARIADB_ROOT_PASSWORD: 1234
       MARIADB_USER: todo_user
       MARIADB_PASSWORD: todo_passwd
-      MARIADB_DATABASE: encore
+      MARIADB_DATABASE: sample
     volumes:
-      - ./src/main/resources/db_config/initdb.d:/docker-entrypoint-initdb.d
+      - ./docker/init-db-script:/docker-entrypoint-initdb.d
     ports:
       - "6033:3306"
