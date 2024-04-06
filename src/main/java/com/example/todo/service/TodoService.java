@@ -12,13 +12,14 @@ import com.example.todo.mapper.TodoMapper;
 @Service
 public class TodoService {
     
-     @Autowired
+     final
      TodoMapper todoMapper;
 
+    public TodoService(TodoMapper todoMapper) {
+        this.todoMapper = todoMapper;
+    }
+
     public List<TodoEntity> getTodos() {
-        System.out.println(">>> service findAll :)");
-        List<TodoEntity> list = todoMapper.findAll();
-        System.out.println("debug >>> list" + list.size());
-        return list ;
+        return todoMapper.findAll();
     }
 }
