@@ -1,0 +1,32 @@
+## INSERT
+# curl -X POST --location "http://localhost:8972/todos"
+#    -H "Content-Type: application/json"
+#    -d "{
+#         \"subject\":\"subject\",
+#         \"body\": \"body\",
+#         \"completed\": 1
+#        }"
+POST http://localhost:8972/todos
+Content-Type: application/json
+
+{
+  "subject": "subject",
+  "body": "body",
+  "completed": 1
+}
+
+###
+
+
+POST http://localhost:8972/todos
+Content-Type: application/json
+
+{
+ "subject":"subject",
+ "body": "body",
+ "completed": 1
+}
+
+
+###
+

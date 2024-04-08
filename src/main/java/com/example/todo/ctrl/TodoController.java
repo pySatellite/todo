@@ -2,8 +2,7 @@ package com.example.todo.ctrl;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.todo.entity.TodoEntity;
 import com.example.todo.service.TodoService;
@@ -18,14 +17,19 @@ public class TodoController {
         this.todoService = todoService;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/todos")
     public List<TodoEntity> list() {
         return todoService.getTodos();
     }
 
-    @GetMapping("/find")
-    public TodoEntity find() {
-        return todoService.findById(1);
+    @GetMapping("/todos/{id}")
+    public TodoEntity find(@PathVariable Integer id) {
+        return todoService.findById(id);
+    }
+
+    @PostMapping("/todos")
+    public void newTodo(@RequestBody TodoEntity todo) {
+        todoService.insert(todo);
     }
 
     @GetMapping("/create_table")

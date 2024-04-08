@@ -15,7 +15,8 @@ APP--database:3306-->MariaDB[(MariaDB)]
 ```
 
 ## RUN
-- docker compose - http://localhost:8888/list
+- docker compose - http://localhost:8888/todos
+- docker compose - http://localhost:8888/todos/1
 ```bash
 # Disabled / build -> auto multi-stage build!
 # $ ./gradlew clean bootJar
@@ -24,9 +25,21 @@ $ docker compose up -d --force-recreate --build --renew-anon-volumes
 ```
 ![list](./screenshot/list.png)
 
-- local - http://localhost:8972/list
+- local - http://localhost:8972/todos
+- local - http://localhost:8972/todos/1
 ```
 $ ./graclew clean bootRun
+```
+
+- insert
+```bash
+$ curl -X POST --location "http://localhost:8972/todos" \
+    -H "Content-Type: application/json" \
+    -d "{
+         \"subject\":\"subject\",
+         \"body\": \"body\",
+         \"completed\": 1
+        }"
 ```
 
 ## Check Telnet
