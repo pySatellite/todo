@@ -28,7 +28,7 @@ class TodoMapperTest {
     @Test
     void findAllTest() {
         // GIVEN
-        todoMapper.createTable();
+//        todoMapper.createTable();
         TodoEntity todo = new TodoEntity();
         todo.setSubject("subject");
         todo.setBody("body");
@@ -39,7 +39,7 @@ class TodoMapperTest {
         List<TodoEntity> todos = todoMapper.findAll();
 
         // THEN
-        Assertions.assertEquals(1, todos.get(0).id);
+        Assertions.assertEquals(11, todos.get(0).id);
         Assertions.assertEquals("subject", todos.get(0).subject);
         Assertions.assertEquals("body", todos.get(0).body);
         Assertions.assertEquals(true, todos.get(0).completed);

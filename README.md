@@ -80,7 +80,7 @@ i
 - https://spring.io/guides/topicals/spring-boot-docker
 - https://dkswngus7.tistory.com/19
 - [MybatisTest를 통한 Mapper 단위 테스트](https://plz-exception.tistory.com/28)
-
+- https://docs.spring.io/spring-boot/how-to/data-initialization.html
 
 ## Err
 - [Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required](https://stackoverflow.com/questions/75136845/property-sqlsessionfactory-or-sqlsessiontemplate-are-required-the-problem-i)

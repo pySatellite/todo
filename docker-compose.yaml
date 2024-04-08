@@ -25,6 +25,6 @@ services:
       MARIADB_PASSWORD: todo_passwd
       MARIADB_DATABASE: sample
     volumes:
-      - ./docker/init-db-script:/docker-entrypoint-initdb.d
+      - ./src/test/resources/init-db-script:/docker-entrypoint-initdb.d
     ports:
       - "6033:3306"

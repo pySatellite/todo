@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.todo.mapper.TodoMapper">
+    <select id="findAll"
+            resultType="com.example.todo.entity.TodoEntity">
+        SELECT 
+            id, subject, body, completed
+        FROM todos
+        ORDER BY id DESC
+    </select>
+
+    <insert id="createTable">
+        CREATE TABLE IF NOT EXISTS todos (
+            id 	INT NOT NULL AUTO_INCREMENT,
+            subject VARCHAR(50),
+            body VARCHAR(50),
+            completed TINYINT,
+            PRIMARY KEY(id)
+        )
+    </insert>
+
+    <insert id="insert" parameterType="com.example.todo.entity.TodoEntity">
+        INSERT INTO todos(subject, body, completed)
+        VALUES (
+            #{subject},
+            #{body},
+            #{completed}
+        )
+    </insert>
+</mapper>

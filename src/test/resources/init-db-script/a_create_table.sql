@@ -1,7 +1,7 @@
-CREATE TABLE todos (
+CREATE TABLE IF NOT EXISTS todos (
 	id 	INT NOT NULL AUTO_INCREMENT,
 	subject VARCHAR(50),
 	body VARCHAR(50),
-	completed TINYINT(1),
+	completed TINYINT,
 	PRIMARY KEY(id)
 );
