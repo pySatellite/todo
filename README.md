@@ -16,7 +16,7 @@ APP--database:3306-->MariaDB[(MariaDB)]
 
 ## RUN
 - docker compose - http://localhost:8888/list
-```
+```bash
 # Disabled / build -> auto multi-stage build!
 # $ ./gradlew clean bootJar
 
@@ -66,6 +66,7 @@ i
 ## Ref
 - https://spring.io/guides/topicals/spring-boot-docker
 - https://dkswngus7.tistory.com/19
+- [MybatisTest를 통한 Mapper 단위 테스트](https://plz-exception.tistory.com/28)
 
 
 ## Err
