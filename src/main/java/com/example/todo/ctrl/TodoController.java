@@ -22,4 +22,14 @@ public class TodoController {
     public List<TodoEntity> list() {
         return todoService.getTodos();
     }
+
+    @GetMapping("/find")
+    public TodoEntity find() {
+        return todoService.findById(1);
+    }
+
+    @GetMapping("/create_table")
+    public void createTable() {
+        todoService.createTable();
+    }
 }
