@@ -1,10 +1,10 @@
-package com.example.todo.ctrl;
+package com.example.todo.controller;
 
 import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
 
-import com.example.todo.entity.TodoEntity;
+import com.example.todo.dto.TodoEntity;
 import com.example.todo.service.TodoService;
 
 

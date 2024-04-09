@@ -1,10 +1,9 @@
-package com.example.todo.mapper;
+package com.example.todo.repository;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import com.example.todo.entity.TodoEntity;
+import com.example.todo.dto.TodoEntity;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 

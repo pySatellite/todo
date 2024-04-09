@@ -1,12 +1,13 @@
-package com.example.todo.mapper;
+package com.example.todo.repository;
 
-import com.example.todo.entity.TodoEntity;
+import com.example.todo.dto.TodoEntity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ class TodoMapperTest {
     @Test
     void findAllTest() {
         // GIVEN
-//        todoMapper.createTable();
+        // todoMapper.createTable();
         TodoEntity todo = new TodoEntity();
         todo.setSubject("subject");
         todo.setBody("body");

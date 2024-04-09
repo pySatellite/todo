@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.todo.mapper.TodoMapper">
+<mapper namespace="com.example.todo.repository.TodoMapper">
     <select id="findAll"
-            resultType="com.example.todo.entity.TodoEntity">
+            resultType="com.example.todo.dto.TodoEntity">
         SELECT 
             id, subject, body, completed
         FROM todos
@@ -20,7 +20,7 @@
         )
     </insert>
 
-    <insert id="insert" parameterType="com.example.todo.entity.TodoEntity">
+    <insert id="insert" parameterType="com.example.todo.dto.TodoEntity">
         INSERT INTO todos(subject, body, completed)
         VALUES (
             #{subject},
