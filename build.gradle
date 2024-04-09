@@ -6,10 +6,11 @@ plugins {
 	//https://docs.gradle.org/current/userguide/jacoco_plugin.html
 	id 'jacoco'
 	id 'pmd'
+	id 'checkstyle'
 }
 
 group = 'com.example'
-version = '0.4.0-SNAPSHOT'
+version = '0.7.0-SNAPSHOT'
 
 java {
 	sourceCompatibility = '17'
@@ -22,7 +23,7 @@ configurations {
 }
 // add
 bootJar {
-	archiveFileName = 'sb-mybatis-sample.jar'
+	archiveFileName = 'canary-spring.jar'
 }
 repositories {
 	mavenCentral()
@@ -67,4 +68,8 @@ pmd {
 	toolVersion = "7.0.0"
 	rulesMinimumPriority = 5
 	ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
+}
+
+checkstyle {
+	toolVersion = "10.12.4"
 }

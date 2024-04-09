@@ -85,6 +85,7 @@ i
 - [Applying an external plugin in convention plugin](https://docs.gradle.org/current/samples/sample_incubating_publishing_convention_plugins.html#applying_an_external_plugin_in_convention_plugin)
 - https://plugins.jenkins.io/warnings-ng/
 - https://github.com/pmd/pmd
+- [checkstyle rule config](https://yeongchan1228.tistory.com/129)
 
 ## Err
 - [Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required](https://stackoverflow.com/questions/75136845/property-sqlsessionfactory-or-sqlsessiontemplate-are-required-the-problem-i)
