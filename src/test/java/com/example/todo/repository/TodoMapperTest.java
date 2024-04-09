@@ -45,4 +45,18 @@ class TodoMapperTest {
         Assertions.assertEquals("body", todos.get(0).body);
         Assertions.assertEquals(true, todos.get(0).completed);
     }
+
+    @Test
+    void findIdTest() {
+        // GIVEN
+
+        // WHEN
+        TodoEntity todo= todoMapper.findById(1);
+
+        // THEN
+        Assertions.assertEquals(1, todo.getId());
+        Assertions.assertEquals("Morning workout", todo.getSubject());
+        Assertions.assertEquals("30 minutes of exercise at home", todo.getBody());
+        Assertions.assertEquals(false, todo.getCompleted());
+    }
 }
