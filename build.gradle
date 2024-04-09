@@ -6,6 +6,7 @@ plugins {
 	//https://docs.gradle.org/current/userguide/jacoco_plugin.html
 	id 'jacoco'
 	id 'pmd'
+	id 'checkstyle'
 }
 
 group = 'com.example'
@@ -67,4 +68,8 @@ pmd {
 	toolVersion = "6.21.0"
 	rulesMinimumPriority = 5
 	ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
+}
+
+checkstyle {
+	toolVersion = "10.12.4"
 }
