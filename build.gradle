@@ -5,6 +5,7 @@ plugins {
 
 	//https://docs.gradle.org/current/userguide/jacoco_plugin.html
 	id 'jacoco'
+	id 'pmd'
 }
 
 group = 'com.example'
@@ -59,4 +60,11 @@ jacocoTestReport {
 		html.required = false
 		csv.required = false
 	}
+}
+
+pmd {
+	consoleOutput = true
+	toolVersion = "6.21.0"
+	rulesMinimumPriority = 5
+	ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
 }

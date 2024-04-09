@@ -82,6 +82,8 @@ i
 - [MybatisTest를 통한 Mapper 단위 테스트](https://plz-exception.tistory.com/28)
 - https://docs.spring.io/spring-boot/how-to/data-initialization.html
 - https://malshani-wijekoon.medium.com/spring-boot-folder-structure-best-practices-18ef78a81819
+- [Applying an external plugin in convention plugin](https://docs.gradle.org/current/samples/sample_incubating_publishing_convention_plugins.html#applying_an_external_plugin_in_convention_plugin)
+- https://plugins.jenkins.io/warnings-ng/
 
 ## Err
 - [Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required](https://stackoverflow.com/questions/75136845/property-sqlsessionfactory-or-sqlsessiontemplate-are-required-the-problem-i)
