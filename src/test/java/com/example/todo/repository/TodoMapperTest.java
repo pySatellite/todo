@@ -40,10 +40,10 @@ class TodoMapperTest {
         List<TodoEntity> todos = todoMapper.findAll();
 
         // THEN
-        Assertions.assertEquals(11, todos.get(0).id);
-        Assertions.assertEquals("subject", todos.get(0).subject);
-        Assertions.assertEquals("body", todos.get(0).body);
-        Assertions.assertEquals(true, todos.get(0).completed);
+        Assertions.assertEquals(11, todos.get(0).getId());
+        Assertions.assertEquals("subject", todos.get(0).getSubject());
+        Assertions.assertEquals("body", todos.get(0).getBody());
+        Assertions.assertEquals(true, todos.get(0).getCompleted());
     }
 
     @Test

@@ -8,8 +8,8 @@ import lombok.ToString;
 @Getter
 @ToString
 public class TodoEntity {
-    public Integer  id ; 
-    public String   subject ;
+    private Integer  id ;
+    private String   subject ;
     public String   body ;
-    public Boolean  completed ; 
+    public Boolean  completed ;
 }
