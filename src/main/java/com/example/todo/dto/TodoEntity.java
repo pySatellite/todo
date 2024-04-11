@@ -9,8 +9,8 @@ import lombok.ToString;
 @Getter
 @ToString
 public class TodoEntity {
-	private Integer id;
-	private String subject;
-	public String body;
-	public Boolean completed;
+  private Integer id;
+  private String subject;
+  public String body;
+  public Boolean completed;
 }
