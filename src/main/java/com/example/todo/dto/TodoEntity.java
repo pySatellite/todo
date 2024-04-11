@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Setter(AccessLevel.PRIVATE)
+@Setter(AccessLevel.PUBLIC)
 @Getter
 @ToString
 public class TodoEntity {
