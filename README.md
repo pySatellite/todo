@@ -87,6 +87,7 @@ i
 - https://github.com/pmd/pmd
 - [checkstyle rule config](https://yeongchan1228.tistory.com/129)
 - https://engineering.linecorp.com/ko/blog/static-analysis-of-java-app
+- [CheckStyle-적용하기](https://bobr2.tistory.com/entry/Intellij-%08CheckStyle-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
 
 ## Err
 - [Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required](https://stackoverflow.com/questions/75136845/property-sqlsessionfactory-or-sqlsessiontemplate-are-required-the-problem-i)
