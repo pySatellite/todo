@@ -11,6 +11,6 @@ import lombok.ToString;
 public class TodoEntity {
   private Integer id;
   private String subject;
-  public String body;
-  public Boolean completed;
+  private String body;
+  private Boolean completed;
 }
