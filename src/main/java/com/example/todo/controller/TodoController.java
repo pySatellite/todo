@@ -19,7 +19,7 @@ public class TodoController {
   public List<TodoEntity> all() {
     return todoService.getTodos();
   }
-
+  
   @GetMapping("/todos/{id}")
   public TodoEntity find(@PathVariable Integer id) {
     return todoService.findById(id);
