@@ -93,7 +93,7 @@ apply plugin: 'org.sonarqube'
 sonarqube {
 	properties {
 		property 'sonar.host.url', 'https://sona.cciiccdd.store'
-		property 'sonar.login', 'squ_63749837bb4016eba41d17fff4a1621179114d40'
+		property 'sonar.login', 'squ_86577836d6b164bc30a6b3f42d3d5e45fa3f639e'
 		property 'sonar.sources', 'src'
 		property 'sonar.language', 'java'
 		property 'sonar.projectVersion', '1.1.0-SNAPSHOT'
