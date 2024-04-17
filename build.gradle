@@ -10,6 +10,7 @@ plugins {
 	id 'pmd'
 	id 'checkstyle'
 	id "com.github.spotbugs" version "6.0.10"
+	id "org.sonarqube" version "5.0.0.4638"
 
 }
 
@@ -85,4 +86,21 @@ spotbugsMain {
         xml.enabled = true
         html.enabled = true
     }
+}
+
+apply plugin: 'org.sonarqube'
+
+sonarqube {
+	properties {
+		property 'sonar.host.url', 'https://sona.cciiccdd.store'
+		property 'sonar.login', 'squ_63749837bb4016eba41d17fff4a1621179114d40'
+		property 'sonar.sources', 'src'
+		property 'sonar.language', 'java'
+		property 'sonar.projectVersion', '1.1.0-SNAPSHOT'
+		property 'sonar.sourceEncoding', 'UTF-8'
+		property 'sonar.coverage.jacoco.xmlReportPaths', '${buildDir}/reports/jacoco/test/jacocoTestReport.xml'
+		property 'sonar.java.binaries', '${buildDir}/classes'
+		property 'sonar.test.inclusions', '**/*Test.java'
+		property 'sonar.exclusions', '**/test/**, **/Q*.java, **/*Doc*.java, **/resources/**'
+	}
 }
