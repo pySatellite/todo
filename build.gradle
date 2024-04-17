@@ -92,15 +92,7 @@ apply plugin: 'org.sonarqube'
 
 sonarqube {
 	properties {
-		property 'sonar.host.url', 'https://sona.cciiccdd.store'
-		property 'sonar.login', 'squ_86577836d6b164bc30a6b3f42d3d5e45fa3f639e'
-		property 'sonar.sources', 'src'
-		property 'sonar.language', 'java'
-		property 'sonar.projectVersion', '1.1.0-SNAPSHOT'
-		property 'sonar.sourceEncoding', 'UTF-8'
-		property 'sonar.coverage.jacoco.xmlReportPaths', '${buildDir}/reports/jacoco/test/jacocoTestReport.xml'
-		property 'sonar.java.binaries', '${buildDir}/classes'
-		property 'sonar.test.inclusions', '**/*Test.java'
-		property 'sonar.exclusions', '**/test/**, **/Q*.java, **/*Doc*.java, **/resources/**'
+		property("sonar.host.url", "https://sonar.cciiccdd.store")
+		property 'sonar.login', 'squ_e686535a92e74331250abac3176336e6a607d2d4'
 	}
 }

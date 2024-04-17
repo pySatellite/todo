@@ -21,7 +21,7 @@ class TodoMapperTest {
     private TodoEntity todoEntity;
     @Test
     void simpleTest() {
-        Assertions.assertEquals(1, 1);
+        Assertions.assertEquals(1 ,1);
         Assertions.assertTrue(true);
         Assertions.assertFalse(false);
     }
