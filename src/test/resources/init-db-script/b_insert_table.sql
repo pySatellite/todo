@@ -1,0 +1,10 @@
+INSERT INTO todo(subject, body, completed) VALUES('Morning workout', '30 minutes of exercise at home', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Prepare breakfast', 'Create a balanced and nutritious meal', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Check important emails', 'Review and respond to work-related emails', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Prepare for meeting', 'Organize meeting', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Meet friends', 'Meet up with friends as scheduled', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Make time for learning', 'Dedicate time to acquiring new knowledge', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Clean the house', 'Maintain a tidy home environment', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Cook dinner', 'Enjoy a pleasant meal with family', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Do pre-bed stretching', 'Stretching for body care and relaxation', 0);
+INSERT INTO todo(subject, body, completed) VALUES('Write a diary', 'Organize thoughts by reflecting on the day', 0);

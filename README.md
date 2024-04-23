@@ -1,7 +1,9 @@
-# SpringBoot MyBartis3 MariaDB Sample
+# SpringBoot MyBartis3 MariaDB -> 🐤
 
 - java 17
 - springboot 3.1.10
+- spring-boot-starter-data-rest
+- spring-boot-starter-data-jpa
 - mybatis 3.0.3
 - 11.3.2-MariaDB-1:11.3.2+maria~ubu2204
 
@@ -16,11 +18,35 @@ APP--database:3306-->MariaDB[(MariaDB)]
 
 ## RUN
 - docker compose - http://localhost:8888/list
+
 ```
+
+## RUN
+- docker compose - http://localhost:8888/todos
+- docker compose - http://localhost:8888/todos/1
+```bash
 # Disabled / build -> auto multi-stage build!
 # $ ./gradlew clean bootJar
 
-$ docker compose up -d --force-recreate --build
+$ docker compose up -d --force-recreate --build --renew-anon-volumes
+```
+![list](./screenshot/list.png)
+
+- local - http://localhost:8972/todos
+- local - http://localhost:8972/todos/1
+```
+$ ./graclew clean bootRun
+```
+
+- insert
+```bash
+$ curl -X POST --location "http://localhost:8972/todos" \
+    -H "Content-Type: application/json" \
+    -d "{
+         \"subject\":\"subject\",
+         \"body\": \"body\",
+         \"completed\": 1
+        }"
 ```
 ![list](./screenshot/list.png)
 
@@ -66,7 +92,16 @@ i
 ## Ref
 - https://spring.io/guides/topicals/spring-boot-docker
 - https://dkswngus7.tistory.com/19
-
+- [MybatisTest를 통한 Mapper 단위 테스트](https://plz-exception.tistory.com/28)
+- https://docs.spring.io/spring-boot/how-to/data-initialization.html
+- https://malshani-wijekoon.medium.com/spring-boot-folder-structure-best-practices-18ef78a81819
+- [Applying an external plugin in convention plugin](https://docs.gradle.org/current/samples/sample_incubating_publishing_convention_plugins.html#applying_an_external_plugin_in_convention_plugin)
+- https://plugins.jenkins.io/warnings-ng/
+- https://github.com/pmd/pmd
+- [checkstyle rule config](https://yeongchan1228.tistory.com/129)
+- https://engineering.linecorp.com/ko/blog/static-analysis-of-java-app
+- [CheckStyle-적용하기](https://bobr2.tistory.com/entry/Intellij-%08CheckStyle-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
+- https://spring.io/guides/gs/accessing-data-rest
 
 ## Err
 - [Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required](https://stackoverflow.com/questions/75136845/property-sqlsessionfactory-or-sqlsessiontemplate-are-required-the-problem-i)

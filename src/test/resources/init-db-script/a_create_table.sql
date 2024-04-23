@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS todo (
+	id 	INT NOT NULL AUTO_INCREMENT,
+	subject VARCHAR(255),
+	body VARCHAR(255),
+	completed TINYINT,
+	PRIMARY KEY(id)
+);
