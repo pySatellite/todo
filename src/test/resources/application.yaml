@@ -13,7 +13,7 @@ spring:
       data-locations: classpath:init-db-script/b_insert_table.sql
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     generate-ddl: false
     show-sql: true
 
