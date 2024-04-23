@@ -1,6 +1,6 @@
-package observability.canary.api.controller;
+package canary.rest_db.controller;
 
-import observability.canary.api.dto.Todo;
+import canary.rest_db.dto.Todo;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;

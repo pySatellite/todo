@@ -1,6 +1,6 @@
-package observability.canary.api.repository;
+package canary.rest_db.repository;
 
-import observability.canary.api.dto.Todo;
+import canary.rest_db.dto.Todo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

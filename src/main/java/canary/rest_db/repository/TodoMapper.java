@@ -1,8 +1,8 @@
-package observability.canary.api.repository;
+package canary.rest_db.repository;
 
 import java.util.List;
 
-import observability.canary.api.dto.Todo;
+import canary.rest_db.dto.Todo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

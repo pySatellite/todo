@@ -1,11 +1,11 @@
-package observability.canary.api.service;
+package canary.rest_db.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import observability.canary.api.dto.Todo;
-import observability.canary.api.repository.TodoMapper;
+import canary.rest_db.dto.Todo;
+import canary.rest_db.repository.TodoMapper;
 
 
 @Service

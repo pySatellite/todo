@@ -1,4 +1,4 @@
-package observability.canary.api.dto;
+package canary.rest_db.dto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

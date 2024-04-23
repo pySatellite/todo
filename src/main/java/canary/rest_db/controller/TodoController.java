@@ -1,9 +1,9 @@
-package observability.canary.api.controller;
+package canary.rest_db.controller;
 
 import java.util.List;
 
-import observability.canary.api.dto.Todo;
-import observability.canary.api.service.TodoService;
+import canary.rest_db.service.TodoService;
+import canary.rest_db.dto.Todo;
 import org.springframework.web.bind.annotation.*;
 
 

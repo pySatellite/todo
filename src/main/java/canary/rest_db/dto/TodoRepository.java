@@ -1,4 +1,4 @@
-package observability.canary.api.dto;
+package canary.rest_db.dto;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
