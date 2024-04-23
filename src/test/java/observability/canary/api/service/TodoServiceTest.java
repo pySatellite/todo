@@ -1,4 +1,4 @@
-package com.example.todo.service;
+package observability.canary.api.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;

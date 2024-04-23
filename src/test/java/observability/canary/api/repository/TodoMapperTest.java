@@ -1,13 +1,12 @@
-package com.example.todo.repository;
+package observability.canary.api.repository;
 
-import com.example.todo.dto.TodoEntity;
+import observability.canary.api.dto.Todo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,10 +17,10 @@ class TodoMapperTest {
     @Autowired
     private TodoMapper todoMapper;
 
-    private TodoEntity todoEntity;
+    private Todo todoEntity;
     @Test
     void simpleTest() {
-        Assertions.assertEquals(1 ,1);
+        Assertions.assertEquals(1, 1);
         Assertions.assertTrue(true);
         Assertions.assertFalse(false);
     }
@@ -30,14 +29,14 @@ class TodoMapperTest {
     void findAllTest() {
         // GIVEN
         // todoMapper.createTable();
-        TodoEntity todo = new TodoEntity();
+        Todo todo = new Todo();
         todo.setSubject("subject");
         todo.setBody("body");
         todo.setCompleted(true);
         todoMapper.insert(todo);
 
         // WHEN
-        List<TodoEntity> todos = todoMapper.findAll();
+        List<Todo> todos = todoMapper.findAll();
 
         // THEN
         Assertions.assertEquals(11, todos.get(0).getId());
@@ -51,7 +50,7 @@ class TodoMapperTest {
         // GIVEN
 
         // WHEN
-        TodoEntity todo= todoMapper.findById(1);
+        Todo todo= todoMapper.findById(1);
 
         // THEN
         Assertions.assertEquals(1, todo.getId());

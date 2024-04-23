@@ -1,9 +1,9 @@
-package com.example.todo.controller;
+package observability.canary.api.controller;
 
 import java.util.List;
 
-import com.example.todo.dto.TodoEntity;
-import com.example.todo.service.TodoService;
+import observability.canary.api.dto.Todo;
+import observability.canary.api.service.TodoService;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -16,17 +16,17 @@ public class TodoController {
   }
 
   @GetMapping("/todos")
-  public List<TodoEntity> all() {
+  public List<Todo> all() {
     return todoService.getTodos();
   }
   
   @GetMapping("/todos/{id}")
-  public TodoEntity find(@PathVariable Integer id) {
+  public Todo find(@PathVariable Integer id) {
     return todoService.findById(id);
   }
 
   @PostMapping("/todos")
-  public void newTodo(@RequestBody TodoEntity todo) {
+  public void newTodo(@RequestBody Todo todo) {
     todoService.insert(todo);
   }
 

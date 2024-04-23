@@ -1,6 +1,6 @@
-package com.example.todo.controller;
+package observability.canary.api.controller;
 
-import com.example.todo.dto.TodoEntity;
+import observability.canary.api.dto.Todo;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -41,11 +41,11 @@ class TodoControllerTest {
 
         String json = mvcResult.getResponse().getContentAsString();
         ObjectMapper objectMapper = new ObjectMapper();
-        List<TodoEntity> todos = objectMapper.readValue(json, new TypeReference<>() {});
+        List<Todo> todos = objectMapper.readValue(json, new TypeReference<>() {});
 
         // assertEquals(10, todos.size());
 
-        for (TodoEntity todo : todos) {
+        for (Todo todo : todos) {
             assertNotNull(todo.getId());
             assertNotNull(todo.getSubject());
             assertNotNull(todo.getBody());

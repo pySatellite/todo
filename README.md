@@ -1,7 +1,9 @@
-# SpringBoot MyBartis3 MariaDB Sample
+# SpringBoot MyBartis3 MariaDB -> 🐤
 
 - java 17
 - springboot 3.1.10
+- spring-boot-starter-data-rest
+- spring-boot-starter-data-jpa
 - mybatis 3.0.3
 - 11.3.2-MariaDB-1:11.3.2+maria~ubu2204
 
@@ -12,6 +14,11 @@ LOCAL(((LOCAL)))--8972-->APP
 DOCKER(((DOCKER)))--8888-->APP
 APP--localhost:6603-->MariaDB
 APP--database:3306-->MariaDB[(MariaDB)]
+```
+
+## RUN
+- docker compose - http://localhost:8888/list
+
 ```
 
 ## RUN
@@ -40,6 +47,12 @@ $ curl -X POST --location "http://localhost:8972/todos" \
          \"body\": \"body\",
          \"completed\": 1
         }"
+```
+![list](./screenshot/list.png)
+
+- local - http://localhost:8972/list
+```
+$ ./graclew clean bootRun
 ```
 
 ## Check Telnet
@@ -88,6 +101,7 @@ i
 - [checkstyle rule config](https://yeongchan1228.tistory.com/129)
 - https://engineering.linecorp.com/ko/blog/static-analysis-of-java-app
 - [CheckStyle-적용하기](https://bobr2.tistory.com/entry/Intellij-%08CheckStyle-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
+- https://spring.io/guides/gs/accessing-data-rest
 
 ## Err
 - [Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required](https://stackoverflow.com/questions/75136845/property-sqlsessionfactory-or-sqlsessiontemplate-are-required-the-problem-i)

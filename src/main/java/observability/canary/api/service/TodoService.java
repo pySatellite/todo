@@ -1,11 +1,11 @@
-package com.example.todo.service;
+package observability.canary.api.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.todo.dto.TodoEntity;
-import com.example.todo.repository.TodoMapper;
+import observability.canary.api.dto.Todo;
+import observability.canary.api.repository.TodoMapper;
 
 
 @Service
@@ -16,7 +16,7 @@ public class TodoService {
     this.todoMapper = todoMapper;
   }
 
-  public List<TodoEntity> getTodos() {
+  public List<Todo> getTodos() {
     return todoMapper.findAll();
   }
 
@@ -24,11 +24,11 @@ public class TodoService {
     todoMapper.createTable();
   }
 
-  public TodoEntity findById(Integer id) {
+  public Todo findById(Integer id) {
     return todoMapper.findById(id);
   }
 
-  public void insert(TodoEntity todo) {
+  public void insert(Todo todo) {
     todoMapper.insert(todo);
   }
 }

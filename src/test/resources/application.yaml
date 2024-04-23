@@ -11,7 +11,11 @@ spring:
     init:
       schema-locations: classpath:init-db-script/a_create_table.sql
       data-locations: classpath:init-db-script/b_insert_table.sql
-
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+    show-sql: true
 
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml

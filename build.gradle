@@ -2,7 +2,7 @@ import com.github.spotbugs.snom.SpotBugsReport
 
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.1.10'
+	id 'org.springframework.boot' version '3.2.0'
 	id 'io.spring.dependency-management' version '1.1.4'
 
 	//https://docs.gradle.org/current/userguide/jacoco_plugin.html
@@ -10,12 +10,11 @@ plugins {
 	id 'pmd'
 	id 'checkstyle'
 	id "com.github.spotbugs" version "6.0.10"
-	id "org.sonarqube" version "5.0.0.4638"
 
 }
 
-group = 'com.example'
-version = '0.9.0-SNAPSHOT'
+group = 'store.cccanary'
+version = '0.9.1-SNAPSHOT'
 
 java {
 	sourceCompatibility = '17'
@@ -26,22 +25,21 @@ configurations {
 		extendsFrom annotationProcessor
 	}
 }
-// add
-bootJar {
-	//archiveFileName = 'canary-spring.jar'
-}
 repositories {
 	mavenCentral()
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
 
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-	testRuntimeOnly 'com.h2database:h2'
+	runtimeOnly 'com.h2database:h2'
 
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -86,13 +84,4 @@ spotbugsMain {
         xml.enabled = true
         html.enabled = true
     }
-}
-
-apply plugin: 'org.sonarqube'
-
-sonarqube {
-	properties {
-		property("sonar.host.url", "https://sonar.cciiccdd.store")
-		property 'sonar.login', 'squ_e686535a92e74331250abac3176336e6a607d2d4'
-	}
 }
